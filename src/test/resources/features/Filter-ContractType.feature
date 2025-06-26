@@ -7,7 +7,7 @@ Feature: Filter the contract type jobs in search
   Background:
     Given I navigate to the NHS Candidate Search page
 
-  Scenario Outline: Filter the working pattern jobs in search result
+  Scenario Outline: Contract Filter
     When I search for a job with "Developer" as the "job title"
     And I click on "search button"
     Then results should contain the word "Developer" in "Job Title"

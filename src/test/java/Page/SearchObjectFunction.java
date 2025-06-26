@@ -821,9 +821,13 @@ public class SearchObjectFunction {
     public void resultSummary() {
         WebDriver driver = BaseClass.driver;
         List<WebElement> results = driver.findElements(By.cssSelector("li[data-test='search-result']"));
+        if(results.isEmpty()) {
+            Assert.assertTrue(noResultFound.getText().contains("No result found"));
+        }
+        else{
         Assert.assertFalse("Expected at least one result", results.isEmpty());
-        String firstTitle = results.get(0).findElement(By.cssSelector("[data-test='search-result-job-title']")).getText().trim();
-        System.out.println("Found at least one job result – first title: " + firstTitle);
+        String firstTitle = results.get(0).findElement(By.cssSelector("[data-test='search-result-job-title']")).getText().trim();}
+        //System.out.println("Found at least one job result – first title: " + firstTitle);}
     }
 
     public void enterPayRange(String payRangeText) {

@@ -13,7 +13,7 @@ Feature: Checking the hidden button or link in Search for jobs application
     And I click on "search link"
     And I click on "search button"
     And I "can't" see Save the search option
-  @search
+
   Scenario: Check the hidden feature of distance filter
     Given I navigate to the NHS Candidate Search page
     And the page correct heading should be "Search for jobs in the NHS"

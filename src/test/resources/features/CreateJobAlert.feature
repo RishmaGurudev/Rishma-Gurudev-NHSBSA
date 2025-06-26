@@ -7,7 +7,7 @@ Feature: Create the Job Alert for the search
   Background:
     Given I navigate to the NHS Candidate Search page
 
-  Scenario: Search for an job with Postcode
+  Scenario: Search for an job
     When I search for a job with "Java" as the "Skills"
     And I click on "search button"
     And I click on "create alert button"

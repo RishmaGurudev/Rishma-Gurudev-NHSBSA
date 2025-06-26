@@ -4,7 +4,7 @@ Feature: Checking the footer links in search application
   I need to be access the footer links of the application
   So that I can have the relevant information
 
-  Scenario Outline: clicking on the footerlink
+  Scenario Outline: Clicking on the footerlink
     Given I navigate to the NHS Candidate Search page
     And I click on "<FooterLink>"
     Then the page correct heading should be "<PageName>" opens in new tab
