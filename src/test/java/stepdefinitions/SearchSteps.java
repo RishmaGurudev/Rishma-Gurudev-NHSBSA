@@ -248,6 +248,21 @@ public class SearchSteps
             case "search link":
                 searchObjectFunction.clickSearchLink();
                 break;
+            case "privacy policy":
+                searchObjectFunction.clickPrivacyPolicy();
+                break;
+            case "terms and conditions":
+                searchObjectFunction.clickTermsAndConditions();
+                break;
+            case "cookies":
+                searchObjectFunction.clickCookies();
+                break;
+            case "accessibility statement":
+                searchObjectFunction.clickAccessibilityStatement();
+                break;
+            case "how to apply for jobs ":
+                searchObjectFunction.clickHowtoApplyJob();
+                break;
             default:
                 break;
         }
@@ -257,5 +272,22 @@ public class SearchSteps
     @And("I select the Job to apply")
     public void iSelectTheJobToApply() {
         searchObjectFunction.applyJob();
+    }
+
+
+    @Then("the page correct heading should be {string} opens in new tab")
+    public void thePageCorrectHeadingShouldBeOpensInNewTab(String heading) {
+        searchObjectFunction.checkHeadingNewTab(heading);
+    }
+
+    @And("I {string} see Save the search option")
+    public void iSeeSaveTheSearchOption(String value) {
+        searchObjectFunction.checkSaveSearchVisibility(value);
+    }
+
+    @And("I {string} see the distance filter")
+    public void iSeeTheDistanceFilter(String value) {
+        searchObjectFunction.checkDistanceFilterVisibility(value);
+
     }
 }

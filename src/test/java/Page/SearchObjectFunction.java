@@ -322,6 +322,22 @@ public class SearchObjectFunction {
     @FindBy(how = How.CSS, using = "a.nhsuk-header__navigation-link[href='/candidate/search']")
     private WebElement searchNavLink;
 
+    @FindBy(how = How.ID, using = "privacy")
+    private WebElement privacyPolicy;
+
+    @FindBy(how = How.ID, using = "acceptableUse")
+    private WebElement termsAndCondition;
+
+    @FindBy(how = How.ID, using = "accessibility")
+    private WebElement accessibilityStatement;
+
+    @FindBy(how = How.ID, using = "cookies")
+    private WebElement cookie;
+
+    @FindBy(how = How.ID, using = "helpText")
+    private WebElement helpText;
+
+
     public SearchObjectFunction() {
         if (BaseClass.driver == null) {
             throw new IllegalStateException("WebDriver is not initialized yet.");
@@ -991,4 +1007,106 @@ public class SearchObjectFunction {
     public void clickSearchLink() {
         searchNavLink.click();
     }
+
+    public void clickPrivacyPolicy() {
+        privacyPolicy.click();
+    }
+
+    public void clickTermsAndConditions() {
+        termsAndCondition.click();
+    }
+
+    public void clickCookies() {
+        cookie.click();
+    }
+
+    public void clickAccessibilityStatement() {
+        accessibilityStatement.click();
+    }
+
+    public void clickHowtoApplyJob() {
+        helpText.click();
+    }
+
+    public void checkHeadingNewTab(String expectedHeading){
+
+        switch (expectedHeading.toLowerCase()){
+            case"privacy policy":
+                expectedHeading = "NHS Jobs Privacy Policy";
+                break;
+            case "terms and conditions":
+                expectedHeading = "Candidate Terms and Conditions for NHS Jobs";
+                break;
+            case "accessibility statement":
+                expectedHeading = "Accessibility statement for NHS Jobs – Applicants";
+                break;
+            case"cookies":
+                expectedHeading = "Cookies";
+                break;
+            case"how to apply for jobs":
+                expectedHeading = "Help and support for applicants";
+                break;
+            default:
+                break;
+        }
+
+        WebDriver driver = BaseClass.driver;
+        new WebDriverWait(driver, Duration.ofSeconds(400)).until(d -> d.getWindowHandles().size() > 1);
+        String current = driver.getWindowHandle();
+        for (String handle : driver.getWindowHandles()) {
+            if (!handle.equals(current)) {
+                driver.switchTo().window(handle);
+                break;
+            }
+        }
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(400));
+        WebElement heading = driver.findElement(By.xpath("(//h1 | //h2)[1]"));
+
+        String actualText = heading.getText();
+        String expectedText = expectedHeading;
+        System.out.println(actualText +expectedText );
+        Assert.assertTrue("Expected heading to contain: " + expectedHeading + " but found: " + actualText, actualText.contains(expectedText));
+        driver.close();
+        driver.switchTo().window(current);
+    }
+
+    public void checkSaveSearchVisibility(String expectation) {
+
+        WebDriver driver = BaseClass.driver;
+        List<WebElement> links = driver.findElements(By.cssSelector("a[data-test='save-search']"));
+        boolean elementPresent  = !links.isEmpty();
+        boolean elementVisible  = elementPresent && links.get(0).isDisplayed();
+        boolean pass;
+        switch (expectation.toLowerCase()) {
+            case "can":
+                pass = elementPresent && elementVisible;
+                break;
+            case "can't":
+                pass = !elementPresent || !elementVisible;
+                break;
+            default:
+                throw new IllegalArgumentException("Expectation must be \"can\" or \"can't\" but was: " + expectation);
+        }
+        Assert.assertTrue(String.format("Mismatch: element present=%s, visible=%s, expectation=%s", elementPresent, elementVisible, expectation), pass);
+    }
+
+    public void checkDistanceFilterVisibility(String value) {
+        WebDriver driver = BaseClass.driver;
+        List<WebElement> links = driver.findElements(By.id("distance"));
+        boolean elementPresent  = !links.isEmpty();
+        boolean elementVisible  = elementPresent && links.get(0).isDisplayed();
+        boolean pass;
+        switch (value.toLowerCase()) {
+            case "can":
+                pass = elementPresent && elementVisible;
+                break;
+            case "can't":
+                pass = !elementPresent || !elementVisible;
+                break;
+            default:
+                throw new IllegalArgumentException("Expectation must be \"can\" or \"can't\" but was: " + value);
+        }
+        Assert.assertTrue(String.format("Mismatch: element present=%s, visible=%s, expectation=%s", elementPresent, elementVisible, value), pass);
+    }
 }
+
