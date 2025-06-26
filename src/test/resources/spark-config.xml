@@ -1,0 +1,6 @@
+<configuration>
+    <theme>STANDARD</theme>
+    <documentTitle>NHS Jobs Test Report</documentTitle>
+    <reportName>NHS Jobs Automation</reportName>
+    <encoding>UTF-8</encoding>
+</configuration>
