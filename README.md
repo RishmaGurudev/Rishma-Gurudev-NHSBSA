@@ -18,7 +18,9 @@ Before you begin, ensure you have the following prerequisites installed on your 
 To get started with test automation, you'll need to clone the Java project or repository from GitHub link below: (https://github.com/RishmaGurudev/Rishma-Gurudev-NHSBSA)
 
 ## Step 2:  Run Tests
-Run the automated tests either using Chrome or Firefox using the below commands in command prompt respectively:
+Run the automated tests either using Chrome or Firefox using the below commands in command prompt respectively: 
+
+(@search tag has been used)
 
 
 mvn test -Dtest="SearchRunner" -Dbrowser=chrome
