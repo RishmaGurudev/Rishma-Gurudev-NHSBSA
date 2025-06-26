@@ -1,8 +1,8 @@
-
+@search
 Feature: Checking the contents in Search for jobs application
-  As an employer
+  As a NHS job seeker
   I need to be check the contents of the application
-  So that candidates can able search for jobs in search
+  So that I can search for jobs in search
 
   Scenario: Check the heading the Search page
     Given I navigate to the NHS Candidate Search page
@@ -28,10 +28,7 @@ Feature: Checking the contents in Search for jobs application
     When I search for a job with "CV3 4DF" as the "Postcode"
     And I click on "search button"
     And I click on "search link"
-    And the page correct heading should be "What is your name?"
-
-
-
+    And the page correct heading should be "Search for jobs in the NHS"
 
   Scenario: Verify the search options on Search landing Screen
     Given I navigate to the NHS Candidate Search page

@@ -319,6 +319,9 @@ public class SearchObjectFunction {
     @FindBy(xpath = "//a[contains(text(), 'Create an account')]")
     private WebElement clickCreateAccountButton;
 
+    @FindBy(how = How.CSS, using = "a.nhsuk-header__navigation-link[href='/candidate/search']")
+    private WebElement searchNavLink;
+
     public SearchObjectFunction() {
         if (BaseClass.driver == null) {
             throw new IllegalStateException("WebDriver is not initialized yet.");
@@ -986,6 +989,6 @@ public class SearchObjectFunction {
     }
 
     public void clickSearchLink() {
-
+        searchNavLink.click();
     }
 }

@@ -1,4 +1,4 @@
-@search
+
 Feature: Filter the jobs based on sort filter search
   As an NHS job seeker
   I want to use the sort filter to sort the job adverts.

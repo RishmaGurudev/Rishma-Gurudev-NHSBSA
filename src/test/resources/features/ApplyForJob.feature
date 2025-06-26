@@ -1,8 +1,8 @@
 
 Feature: Apply for Job
-  As an employer
+  As a NHS job seeker
   I need to be able to search and find a relevant Job
-  So that candidates can click and apply for the job
+  So that I can click and apply for the job
 
   Background:
     Given I navigate to the NHS Candidate Search page

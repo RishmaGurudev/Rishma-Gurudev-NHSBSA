@@ -1,8 +1,8 @@
 
 Feature: Create the Job Alert for the search
-  As an employer
-  I need to be able to search and create the alert for the same
-  So that candidates can have this as their alert
+  As a NHS job seeker
+  I need to search and create the alert for the same
+  So that I can have this as an alert
 
   Background:
     Given I navigate to the NHS Candidate Search page

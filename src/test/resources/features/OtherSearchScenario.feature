@@ -1,8 +1,8 @@
 
 Feature: Search for jobs in the NHS using other factors
-  As an employer
-  I need to be able to publish job advert for search
-  So that candidates can able search for jobs in search
+  As an NHS job seeker
+  I want to use the search functionality with different options
+  So that I can find relevant jobs quickly and easily
 
   Background:
     Given I navigate to the NHS Candidate Search page

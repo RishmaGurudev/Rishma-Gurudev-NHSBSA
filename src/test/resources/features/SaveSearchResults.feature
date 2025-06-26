@@ -1,8 +1,8 @@
 
 Feature: Search and save the search
-  As an employer
-  I need to be able to search and save the search
-  So that candidates can have this in their Saved searches
+  As an NHS job seeker
+  I want to use the search functionality and save the search
+  So that I can find relevant in the saved searches
 
   Background:
     Given I navigate to the NHS Candidate Search page
