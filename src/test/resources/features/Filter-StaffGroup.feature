@@ -1,4 +1,4 @@
-
+@search
 Feature: Filter the staff group based jobs in search
   As an NHS job seeker
   I want to use the staff group filter to filter job adverts.

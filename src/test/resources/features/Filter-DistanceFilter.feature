@@ -1,4 +1,4 @@
-
+@search
 Feature: Distance Filter
   As an NHS job seeker
   I want to use the distance filter

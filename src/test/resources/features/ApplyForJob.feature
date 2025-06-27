@@ -1,4 +1,4 @@
-
+@search
 Feature: Apply for Job
   As a NHS job seeker
   I need to be able to search and find a relevant Job

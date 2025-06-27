@@ -1,4 +1,4 @@
-
+@search
 Feature: Search for jobs in the NHS using other factors
   As an NHS job seeker
   I want to use the search functionality with different options

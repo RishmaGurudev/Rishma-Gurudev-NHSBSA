@@ -1,4 +1,4 @@
-
+@search
 Feature: Checking the contents in Search for jobs application
   As a NHS job seeker
   I need to be check the contents of the application

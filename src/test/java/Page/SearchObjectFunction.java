@@ -772,6 +772,7 @@ public class SearchObjectFunction {
     }
 
     public void checkJobtitle() {
+        WebDriver driver = BaseClass.driver;
         List<WebElement> jobLinks = driver.findElements(By.cssSelector("[data-test='search-result-job-title']"));
         WebElement job = jobLinks.get(0);
         String foundTitle = job.getText();

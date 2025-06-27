@@ -1,4 +1,4 @@
-
+@search
 Feature: Filter the contract type jobs in search
   As an NHS job seeker
   I want to use the covid filter to filter job adverts.

@@ -1,4 +1,4 @@
-
+@search
 Feature: Filter for working pattern job types
   As an NHS job seeker
   I want to use the working pattern filter to filter job adverts.

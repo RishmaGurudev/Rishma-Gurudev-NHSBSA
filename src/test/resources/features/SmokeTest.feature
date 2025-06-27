@@ -1,4 +1,4 @@
-
+@search
 Feature: End-to-End Job Search
   As an NHS job seeker
   I want to use the search functionality with both basic and advanced options

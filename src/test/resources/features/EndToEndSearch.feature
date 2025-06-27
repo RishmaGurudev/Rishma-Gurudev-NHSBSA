@@ -1,4 +1,4 @@
-
+@search
 Feature: Job Search
   As an NHS job seeker
   I want to use the search functionality with both basic and advanced options
@@ -29,7 +29,7 @@ Feature: Job Search
     |Carer      |         |               |                               |           |part-time     |             |                     |£40,000 to £50,000 |           |
     |Therapist  |London   |               |                               |+20 Miles  |              |             |                     |                   |           |
     |Tester     |         |               |                               |           |full-time     |             |                     |                   |Band 5     |
-@search
+
   Scenario: End to End usage of search functionality
     When I tap on "More Search Options"
     And I search for a job with "Developer" as the "job title"

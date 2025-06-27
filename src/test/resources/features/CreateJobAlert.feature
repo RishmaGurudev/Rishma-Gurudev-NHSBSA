@@ -1,4 +1,4 @@
-
+@search
 Feature: Create the Job Alert for the search
   As a NHS job seeker
   I need to search and create the alert for the same

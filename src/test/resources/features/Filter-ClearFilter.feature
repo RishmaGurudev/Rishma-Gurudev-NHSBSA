@@ -1,4 +1,4 @@
-
+@search
 Feature: Clear Filter
   As an NHS job seeker
   I want to use the clear filter.

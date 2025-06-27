@@ -1,4 +1,4 @@
-
+@saerch
 Feature: Checking the footer links in search application
   As a NHS job seeker
   I need to be access the footer links of the application

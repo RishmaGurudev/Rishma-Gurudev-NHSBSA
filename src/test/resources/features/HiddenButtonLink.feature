@@ -1,4 +1,4 @@
-
+@search
 Feature: Checking the hidden button or link in Search for jobs application
   As a NHS job seeker
   I need to be check the hidden feature of the application

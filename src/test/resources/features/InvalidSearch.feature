@@ -1,4 +1,4 @@
-
+@search
 Feature: Negative scenario
   As an NHS job seeker
   I want to use the search functionality with different options

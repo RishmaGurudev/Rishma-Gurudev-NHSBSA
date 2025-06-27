@@ -1,4 +1,4 @@
-
+@search
 Feature: Search and save the job
   As an NHS job seeker
   I want to use the search functionality and save the job

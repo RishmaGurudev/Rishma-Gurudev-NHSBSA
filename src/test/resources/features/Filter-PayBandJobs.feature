@@ -1,4 +1,4 @@
-
+@search
 Feature: Filter the pay grade and scheme based jobs in search
   As an NHS job seeker
   I want to use the pay grade and scheme filter to filter job adverts.
